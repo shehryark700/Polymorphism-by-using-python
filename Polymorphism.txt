@@ -1,0 +1,25 @@
+import pyttsx3 as pt
+class Nationals:
+    def greet(self):
+        greeting = "Good Day"
+
+class Pakistani(Nationals):
+    def greet(self):
+        greeting = pt.speak("Assalam u Aalaikum kyya haaal haai bhhaai")
+
+class German(Nationals):
+    def greet(self):
+        greeting = pt.speak("Hope you have a nice day")
+
+def main():
+    pk = Pakistani()
+    gr = German()
+
+    for i in pk,gr:
+        i.greet()
+
+if __name__=="__main__":
+    main()
+    print("you are in main")
+else:
+    print("you are not in main")
